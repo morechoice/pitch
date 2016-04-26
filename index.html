@@ -27,6 +27,13 @@
 
             }
 
+            .div-rotate{
+                transform: rotate(90deg);
+                -moz-transform: rotate(90deg); // Mozilla
+                -o-transform: rotate(90deg); // Opera
+                -webkit-transform: rotate(90deg); // Webkit
+            }
+
         </style>
     </head>
 
@@ -129,11 +136,60 @@
 
         </script>
 
-        <script>// Escuchar cambios de orientación
+        <script>
+            window.onload = (function () {
+                if (window.screen.width > 600) {
+                    rotateClass(false);
+                    oritnacionVertical();
+                } else {
+                    rotateClass(true);
+                    oritnacionHorizontal();
+                }
+            });
+
             window.addEventListener("orientationchange", function () {
                 // Hacer algo cuando cambia la orientación
-                alert(window.orientation);
+                if (window.orientation == 0) {
+                    rotateClass(true);
+                    oritnacionHorizontal();
+                } else if (window.orientation == 90) {
+                    rotateClass(false);
+                    oritnacionHorizontal();
+                }
             }, false);
+
+            function oritnacionHorizontal() {
+                Reveal.initialize({
+                    center: true,
+                    history: true,
+                    touch: true,
+                    slideNumber: true,
+                });
+            }
+
+            function oritnacionVertical() {
+
+                Reveal.initialize({
+                    center: true,
+                    history: true,
+                    touch: true,
+                    slideNumber: true,
+                    width: 800,
+                    height: 550,
+                });
+            }
+
+            function rotateClass(_remove) {
+                var sliders = document.getElementsByClassName("div-slider");
+
+                if (_remove) {
+                    for (var slid = 0; slid < sliders.length; slid++) {
+                        sliders[slid].className += " div-rotate";
+                    }
+                }
+
+
+            }
         </script>
 
     </body>
