@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>reveal.js - Slide Transitions</title>
+
+        <link rel="stylesheet" href="assets/css/reveal.css">
+        <link rel="stylesheet" href="assets/css/theme/night.css" id="theme">
+        <style type="text/css" media="screen">
+            .slides section.has-dark-background,
+            .slides section.has-dark-background h3 {
+                color: #fff;
+            }
+            .slides section.has-light-background,
+            .slides section.has-light-background h3 {
+                color: #222;
+            }
+
+            .div-slider{
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 900px;
+                height: 600px;
+
+
+            }
+
+            .div-rotate{
+                transform: rotate(90deg);
+                -moz-transform: rotate(90deg); // Mozilla
+                -o-transform: rotate(90deg); // Opera
+                -webkit-transform: rotate(90deg); // Webkit
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section  data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/home.png)">
+
+                    </div>
+                </section>
+                <section data-transition="convex" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide1.png)">
+
+                    </div>
+                </section>
+
+                <section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide3.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide4.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide5.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide6.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide7.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide8.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide9.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide10.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide11.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide12.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide13.png)">
+
+                    </div>
+                </section>
+				<section data-transition="convex-in concave-out" data-background="assets/img/background.png">
+                    <div class="div-slider" style="background-image: url(assets/img/slide14.png)">
+
+                    </div>
+                </section>
+				
+
+            </div>
+
+        </div>
+
+        <script src="assets/lib/js/head.min.js"></script>
+        <script src="assets/js/reveal.js"></script>
+
+        <script>
+
+            Reveal.initialize({
+                center: true,
+                history: true,
+                touch: true,
+                slideNumber: true,
+                width: 800,
+                height: 550,
+                
+            });
+
+        </script>
+		
+		<script>// Escuchar cambios de orientación
+			window.addEventListener("orientationchange", function() {
+			// Hacer algo cuando cambia la orientación
+			alert(window.orientation);
+			}, false);
+		</script>
+
+    </body>
+</html>
